@@ -1,15 +1,13 @@
 import pyautogui
 import time
 
-#queue (1000,670)
-#Quit after game over, coords (960,570)
-#experience continue(960,900)
-#Rewards earned(960,900) (triplaklikkaa), eka kerran, että galactic aukee, sitten 5s jälkeen toisen kerran
-                                        # ja 5s vielä kolmannen kerran, että
-#rankki continue(960,950)
 
 def start():
     pyautogui.moveTo(1000, 670)
+    time.sleep(3)
+    pyautogui.click(1000, 670, button='left')
+    time.sleep(3)
+    pyautogui.click(1000, 670, button='left')
     time.sleep(3)
     pyautogui.click(1000, 670, button='left')
     repeat()
@@ -40,6 +38,10 @@ def repeat():
         pyautogui.moveTo(1000, 670) # UUSI QUEUE
         time.sleep(3)
         pyautogui.click(1000, 670, button='left') # UUSI QUEUE
+        time.sleep(3)
+        pyautogui.click(1000, 670, button='left')  # UUSI QUEUE
+        time.sleep(3)
+        pyautogui.click(1000, 670, button='left')  # UUSI QUEUE
 
 def main():
     time.sleep(10)
